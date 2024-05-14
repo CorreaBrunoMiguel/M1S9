@@ -1,0 +1,31 @@
+POST http://localhost:8080/livros
+Content-Type: application/json
+
+{
+  "titulo": "Sociedade do Anel",
+  "autor": "Tolkien",
+  "anoPublicacao": null
+}
+
+###
+
+POST http://localhost:8080/membros
+Content-Type: application/json
+
+{
+  "nome": "Bruno Miguel CorrÊa",
+  "endereco": "Rua José Sagas",
+  "telefone": "555-654-678"
+}
+
+###
+
+POST http://localhost:8080/emprestimos
+Content-Type: application/json
+
+{
+  "livro_id": 1,
+  "membro_id": 1
+}
+
+###
