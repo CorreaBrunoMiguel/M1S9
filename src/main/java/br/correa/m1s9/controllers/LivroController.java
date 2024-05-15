@@ -19,4 +19,9 @@ public class LivroController {
         return livroService.create(livro);
     }
 
+    @GetMapping
+    public List<Livro> get(){
+        return livroService.findAll();
+    }
+
 }

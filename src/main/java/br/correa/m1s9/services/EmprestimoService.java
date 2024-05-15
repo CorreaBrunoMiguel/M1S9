@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,5 +36,9 @@ public class EmprestimoService {
         emprestimo.setDataDevolucao(emprestimo.getDataEmprestimo().plusDays(7));
 
         return emprestimoRepository.save(emprestimo);
+    }
+
+    public List<Emprestimo> findAll(){
+        return emprestimoRepository.findAll();
     }
 }

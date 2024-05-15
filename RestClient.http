@@ -1,14 +1,17 @@
+# Início Requisições Livros
 POST http://localhost:8080/livros
 Content-Type: application/json
 
 {
   "titulo": "Sociedade do Anel",
   "autor": "Tolkien",
-  "anoPublicacao": null
+  "anoPublicacao": 0
 }
-
+###
+GET http://localhost:8080/livros
 ###
 
+# Inicio Requisições Membros
 POST http://localhost:8080/membros
 Content-Type: application/json
 
@@ -17,9 +20,11 @@ Content-Type: application/json
   "endereco": "Rua José Sagas",
   "telefone": "555-654-678"
 }
-
+###
+GET http://localhost:8080/membros
 ###
 
+# Inicio Requisições Empréstimos
 POST http://localhost:8080/emprestimos
 Content-Type: application/json
 
@@ -27,5 +32,31 @@ Content-Type: application/json
   "livro_id": 1,
   "membro_id": 1
 }
+###
+GET http://localhost:8080/emprestimos
+###
 
+# Inicio Requisições Bibliotecários
+POST http://localhost:8080/bibliotecarios
+Content-Type: application/json
+
+{
+  "nome": "Srª Janete da Silva",
+  "email": "janetasilva@email.com",
+  "password": "12345"
+}
+###
+GET http://localhost:8080/bibliotecarios
+###
+
+# Inicio Requisições Visitantes
+POST http://localhost:8080/visitantes
+Content-Type: application/json
+
+{
+  "nome": "Jonas Matheus Goulart",
+  "telefone": "555-231-554"
+}
+###
+GET http://localhost:8080/visitantes
 ###
