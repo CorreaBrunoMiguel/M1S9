@@ -6,6 +6,7 @@ import br.correa.m1s9.repositories.LivroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,6 +17,10 @@ public class LivroService {
 
     public Livro create(Livro livro){
         return livroRepository.save(livro);
+    }
+
+    public List<Livro> findAll(){
+        return livroRepository.findAll();
     }
 
     public Livro findById(Long id) throws NotFoundException {

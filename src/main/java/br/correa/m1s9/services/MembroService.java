@@ -7,6 +7,8 @@ import br.correa.m1s9.repositories.MembroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class MembroService {
@@ -15,6 +17,10 @@ public class MembroService {
 
     public Membro create(Membro membro){
         return membroRepository.save(membro);
+    }
+
+    public List<Membro> findAll(){
+        return membroRepository.findAll();
     }
 
     public Membro findById(Long id) throws NotFoundException {
@@ -27,4 +33,6 @@ public class MembroService {
                 )
         );
     }
+
+
 }

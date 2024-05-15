@@ -3,10 +3,9 @@ package br.correa.m1s9.controllers;
 import br.correa.m1s9.entities.Membro;
 import br.correa.m1s9.services.MembroService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,5 +17,10 @@ public class MembroController {
     @PostMapping
     public Membro post(@RequestBody Membro membro){
         return membroService.create(membro);
+    }
+
+    @GetMapping
+    public List<Membro> getAll(){
+        return membroService.findAll();
     }
 }
